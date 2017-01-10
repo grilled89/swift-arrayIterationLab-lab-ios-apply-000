@@ -8,12 +8,13 @@
  * [Array](https://github.com/learn-co-curriculum/swift-array-readme)
  * [Array Iteration](https://github.com/learn-co-curriculum/swift-arrayIteration-readme)
  
-
+ 
  */
 /*: question1
  ### 1. You're building an app and want to store all of the ingredients added to a cart. How would you represent this cart in code? The ingredients are "Chips", "Salsa", "Guacamole", "Red wine". Explicitly mark the content of the cart as strings.
  */
 // write your code here
+var shoppingCart: [String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -26,6 +27,7 @@
 // write your code here
 
 
+var numbersList: [Int] = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 
@@ -36,7 +38,10 @@
  */
 // write your code here
 
-
+for numbers in numbersList {
+    print(numbers)
+    
+}
 
 
 
@@ -48,6 +53,10 @@
 // write your code here
 
 
+for cart in shoppingCart {
+    print("get me \(cart)")
+    
+}
 
 
 
@@ -57,6 +66,16 @@
  ### 5. Take the list of shopping cart items you created in question 1 and print their values by passing each item in list to a function to be printed.
  */
 // write your code here
+
+func printCart(cart: String) {
+    print("get me \(cart)")
+    
+}
+for cart in shoppingCart {
+    print(cart)
+    
+}
+
 
 
 
@@ -70,6 +89,18 @@
 // write your code here
 
 
+let names = ["Ryan", "Michael", "Shelley", "Billy"]
+func sayHiToPeople(names: [String]) {
+    for people in names {
+        print("Good morning \(people)")
+        if people == "Michael" {
+            print ("Top of the morning Michael!")
+            
+        }
+    }
+}
+sayHiToPeople(names: ["Ryan"])
+sayHiToPeople(names: ["Michael"])
 
 
 
@@ -79,9 +110,19 @@
  */
 // write your code here
 
-
-
-
+func lessThanFifty(numbers: [Int]) ->[Int] {
+    var lessThanFifty: [Int] = []
+    
+    for grade in grades {
+        if grade <= 50 {
+            lessThanFifty.append(grade)
+        }
+    }
+    return lessThanFifty
+}
+let grades = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
+var finalTest = lessThanFifty(numbers: grades)
+print(finalTest)
 
 
 
